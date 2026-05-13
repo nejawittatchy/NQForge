@@ -8,6 +8,7 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Search, Filter, ArrowRight, Zap, Star } from "lucide-react";
 import * as Icons from "lucide-react";
+import * as React from "react";
 import Link from "next/link";
 
 import { cn } from "@/lib/utils";
@@ -142,7 +143,7 @@ export default function ToolsPage() {
                           >
                             <div className="flex items-start justify-between mb-4">
                               <div className="w-12 h-12 rounded-xl bg-brand/10 text-brand flex items-center justify-center group-hover:scale-110 transition-transform">
-                                <Icon size={24} />
+                                {React.createElement(Icon as React.ElementType, { size: 24 })}
                               </div>
                               <div className="flex gap-2">
                                 {tool.trending && (

@@ -70,7 +70,7 @@ export function ApiShowcase() {
                 <Link href="/api-platform">Get API Key</Link>
               </Button>
               <Button variant="ghost" asChild className="font-semibold">
-                <Link href="/docs">View Documentation</Link>
+                <Link href="/api-platform">View Documentation</Link>
               </Button>
             </div>
           </motion.div>

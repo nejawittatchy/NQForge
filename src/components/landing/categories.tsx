@@ -1,5 +1,7 @@
 "use client";
 
+import * as React from "react";
+
 import { motion } from "framer-motion";
 import { CATEGORIES, ToolCategory } from "@/lib/tools";
 import * as Icons from "lucide-react";
@@ -40,11 +42,11 @@ export function Categories() {
                   className="group block p-8 rounded-3xl border border-border bg-card hover:bg-accent hover:border-brand/20 transition-all duration-300 relative overflow-hidden"
                 >
                   <div className="absolute top-0 right-0 p-4 opacity-[0.03] group-hover:opacity-[0.07] transition-opacity">
-                    <Icon size={120} />
+                    {React.createElement(Icon as React.ElementType, { size: 120 })}
                   </div>
                   
                   <div className="w-12 h-12 rounded-2xl bg-brand/10 text-brand flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                    <Icon size={24} />
+                    {React.createElement(Icon as React.ElementType, { size: 24 })}
                   </div>
                   
                   <h3 className="text-xl font-bold mb-2 group-hover:text-brand transition-colors">{cat.label}</h3>

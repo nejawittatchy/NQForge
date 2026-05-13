@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { Zap, ArrowRight, Github, Mail } from "lucide-react";
+import { Zap, ArrowRight, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -71,7 +71,7 @@ export default function SignUpPage() {
 
           {/* OAuth */}
           <Button variant="outline" className="w-full h-11 rounded-xl mb-4 gap-3" disabled>
-            <Github size={18} />
+            <Mail size={18} />
             Continue with GitHub
             <span className="ml-auto text-[10px] text-muted-foreground bg-muted px-1.5 py-0.5 rounded">Soon</span>
           </Button>

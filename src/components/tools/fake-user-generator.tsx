@@ -78,7 +78,7 @@ export function FakeUserGenerator() {
     if (format === "json") return JSON.stringify(count === 1 ? users[0] : users, null, 2);
     if (format === "csv") {
       const headers = ["id","firstName","lastName","username","email","phone","age","gender","job","company","city","state","zip"];
-      return [headers.join(","), ...users.map(u => headers.map(h => `"${(u as Record<string, string|number>)[h]}"`).join(","))].join("\n");
+      return [headers.join(","), ...users.map(u => headers.map(h => `"${(u as any)[h]}"`).join(","))].join("\n");
     }
     return users.map(u => `INSERT INTO users (id,first_name,last_name,email,phone,age,job,city) VALUES ('${u.id}','${u.firstName}','${u.lastName}','${u.email}','${u.phone}',${u.age},'${u.job}','${u.city}');`).join("\n");
   };
@@ -100,7 +100,7 @@ export function FakeUserGenerator() {
         </div>
         <div className="space-y-2">
           <Label>Export Format</Label>
-          <Select value={format} onValueChange={setFormat}>
+          <Select value={format} onValueChange={(v) => setFormat(v || "json")}>
             <SelectTrigger className="rounded-xl h-11"><SelectValue /></SelectTrigger>
             <SelectContent>
               <SelectItem value="json">JSON</SelectItem>

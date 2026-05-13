@@ -191,7 +191,7 @@ export default function DashboardPage() {
                   {[
                     { icon: Settings, label: "Account Settings", href: "/settings" },
                     { icon: CreditCard, label: "Billing & Plans", href: "/api-platform#pricing" },
-                    { icon: Code, label: "API Docs", href: "/docs" },
+                    { icon: Code, label: "API Docs", href: "/api-platform" },
                     { icon: Shield, label: "Security", href: "/settings#security" },
                   ].map(link => (
                     <Link key={link.href} href={link.href} className="flex items-center gap-3 p-2.5 rounded-xl hover:bg-muted/50 transition-colors text-sm text-muted-foreground hover:text-foreground group">

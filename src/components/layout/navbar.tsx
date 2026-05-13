@@ -33,7 +33,7 @@ const navLinks = [
     ],
   },
   { label: "API", href: "/api-platform", icon: Code },
-  { label: "Docs", href: "/docs", icon: BookOpen },
+  { label: "Docs", href: "/api-platform", icon: BookOpen },
   { label: "Dashboard", href: "/dashboard", icon: LayoutDashboard },
 ];
 

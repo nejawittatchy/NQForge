@@ -51,7 +51,7 @@ export function UuidGenerator() {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div className="space-y-2">
           <Label>UUID Version</Label>
-          <Select value={version} onValueChange={setVersion}>
+          <Select value={version} onValueChange={(val: any) => setVersion(val)}>
             <SelectTrigger className="rounded-xl h-11">
               <SelectValue placeholder="Select version" />
             </SelectTrigger>

@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Zap, Github, Twitter, ExternalLink } from "lucide-react";
+import { Zap, ExternalLink } from "lucide-react";
 import { Separator } from "@/components/ui/separator";
 
 const footerLinks = {
@@ -13,7 +13,7 @@ const footerLinks = {
   ],
   Developers: [
     { label: "API Platform", href: "/api-platform" },
-    { label: "API Docs", href: "/docs" },
+    { label: "API Docs", href: "/api-platform" },
     { label: "API Pricing", href: "/api-platform#pricing" },
     { label: "API Playground", href: "/api-platform/playground" },
     { label: "API Status", href: "/status" },
@@ -61,7 +61,7 @@ export function Footer() {
                 className="w-9 h-9 flex items-center justify-center rounded-lg border border-border hover:border-border/80 hover:bg-accent transition-colors text-muted-foreground hover:text-foreground"
                 aria-label="GitHub"
               >
-                <Github className="w-4 h-4" />
+                <ExternalLink className="w-4 h-4" />
               </a>
               <a
                 href="https://twitter.com/noyeq"
@@ -70,7 +70,7 @@ export function Footer() {
                 className="w-9 h-9 flex items-center justify-center rounded-lg border border-border hover:border-border/80 hover:bg-accent transition-colors text-muted-foreground hover:text-foreground"
                 aria-label="Twitter / X"
               >
-                <Twitter className="w-4 h-4" />
+                <ExternalLink className="w-4 h-4" />
               </a>
               <a
                 href="https://noyeq.com"

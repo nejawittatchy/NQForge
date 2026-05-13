@@ -81,6 +81,7 @@ export default function ApiPlatformPage() {
   };
 
   return (
+    <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd).replace(/</g, "\\u003c") }} />
 
       {/* Hero */}
@@ -247,5 +248,6 @@ curl "https://nqforge.com/api/v1/generate/password?length=32&symbols=true" \\
           </div>
         </div>
       </section>
+    </>
   );
 }

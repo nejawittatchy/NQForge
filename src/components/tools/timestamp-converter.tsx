@@ -85,7 +85,7 @@ export function TimestampConverter() {
 
       <div className="space-y-2">
         <Label>Display Timezone</Label>
-        <Select value={tz} onValueChange={setTz}>
+        <Select value={tz} onValueChange={(val: any) => setTz(val)}>
           <SelectTrigger className="rounded-xl h-11"><SelectValue /></SelectTrigger>
           <SelectContent className="max-h-60">
             {TIMEZONES.map(z => <SelectItem key={z} value={z}>{z}</SelectItem>)}

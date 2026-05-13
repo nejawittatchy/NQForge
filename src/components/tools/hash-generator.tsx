@@ -58,7 +58,7 @@ async function hashText(text: string, algo: Algorithm): Promise<string> {
       }
       return binl2hex(core_md5(str2binl(input), input.length*8));
     }
-    return md5(input);
+    return md5(text);
   }
   const encoder = new TextEncoder();
   const data = encoder.encode(text);

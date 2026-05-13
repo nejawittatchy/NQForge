@@ -8,6 +8,7 @@ import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
 import { ToolRenderer } from "@/components/tools/tool-renderer";
 import * as Icons from "lucide-react";
+import * as React from "react";
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://nqforge.com";
 
@@ -210,7 +211,7 @@ export default async function ToolPage({ params }: Props) {
           <div className="flex items-start justify-between gap-6 mb-8">
             <div className="flex items-start gap-5">
               <div className="w-14 h-14 rounded-2xl bg-brand/10 text-brand flex items-center justify-center flex-shrink-0 border border-brand/20">
-                <Icon size={28} />
+                {React.createElement(Icon as React.ElementType, { size: 28 })}
               </div>
               <div>
                 <div className="flex items-center flex-wrap gap-2 mb-2">
@@ -383,7 +384,7 @@ export default async function ToolPage({ params }: Props) {
                         className="flex items-center gap-3 p-3 rounded-xl border border-border bg-card hover:bg-accent hover:border-brand/20 transition-all group"
                       >
                         <div className="w-9 h-9 rounded-lg bg-brand/10 text-brand flex items-center justify-center flex-shrink-0 group-hover:scale-105 transition-transform">
-                          <RelIcon size={16} />
+                          {React.createElement(RelIcon as React.ElementType, { size: 16 })}
                         </div>
                         <div className="flex-1 min-w-0">
                           <p className="text-sm font-medium truncate group-hover:text-brand transition-colors">{related.name}</p>

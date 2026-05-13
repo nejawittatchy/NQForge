@@ -9,6 +9,7 @@ import { Switch } from "@/components/ui/switch";
 import { Copy, RefreshCw, Check, Shield, ShieldAlert, ShieldCheck } from "lucide-react";
 import { toast } from "sonner";
 import { cn } from "@/lib/utils";
+import { motion } from "framer-motion";
 
 export function PasswordGenerator() {
   const [password, setPassword] = useState("");
@@ -136,7 +137,7 @@ export function PasswordGenerator() {
               min={8} 
               max={64} 
               step={1} 
-              onValueChange={(val) => setLength(val[0])}
+              onValueChange={(val: any) => setLength(Array.isArray(val) ? val[0] : val)}
               className="py-4"
             />
           </div>
