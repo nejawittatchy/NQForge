@@ -13,7 +13,6 @@ const footerLinks = {
   ],
   Developers: [
     { label: "API Platform", href: "/api-platform" },
-    { label: "API Docs", href: "/api-platform" },
     { label: "API Pricing", href: "/api-platform#pricing" },
     { label: "API Playground", href: "/api-platform/playground" },
     { label: "API Status", href: "/status" },
